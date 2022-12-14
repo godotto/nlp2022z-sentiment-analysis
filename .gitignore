@@ -6,3 +6,8 @@ lib/
 lib64
 share/
 pyvenv.cfg
+
+# LaTeX reports
+*.syntex.gz
+*.blg
+*.log

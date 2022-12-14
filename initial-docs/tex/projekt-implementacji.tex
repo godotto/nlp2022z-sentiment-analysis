@@ -1,0 +1,38 @@
+\newpage
+\section{Projekt implementacji}
+
+\subsection{Pobieranie i przygotowywanie danych}
+
+Przed przystąpieniem do trenowania modeli analizy wydźwięku należy zebrać odpowiednio liczny zbiór danych, które posłużą za dane testowe i treningowe dla implementowanego algorytmu.
+
+\subsubsection{Skrypt do pozyskiwania danych z serwisu Amazon}
+
+Ze względu na fakt, że istnieje wiele narzędzi pomagających w pobieraniu wpisów zintegrowanych z tym portalem, a także na łatwość przekładania liczby gwiazdek przyznanych produktowi przez użytkownika na wydźwięk pozytywny, negatywny bądź neutralny, zdecydowano się trenować model na danych pochodzących z serwisu Amazon.
+
+Wybrano po kilka-kilkanaście produktów ze zadanych trzech kategorii i wyszukano je w serwisie Amazon. Następnie ich strony główne, zawierające recenzje stanowiące docelowy zestaw danych, pobrano w formie pliku HTML. W tym celu wykorzystano interfejs \textbf{ScraperAPI}, obsługujący serwery proxy, przeglądarki oraz CAPTCHA i tym samym pozwalający na uzyskanie HTML z dowolnej strony internetowej o znanym adresie URL za pomocą prostego wywołania w dowolnym języku. Zastosowanie takiego interfejsu lub innego, równoważnego narzędzia jest kluczowe w przypadku pobierania danych z serwisu, który implementuje zabezpieczenia przeciwko botom - inaczej żądania są blokowane.
+
+Narzędzie, które zostało wykorzystane w celu wydobycia z otrzymanych w ten sposób dokumentów istotnych informacji to \textbf{Beautiful Soup} - biblioteka dostępna dla języka Python. Pozwala ona na przeszukiwanie plików HTML i XML przy pomocy prostych zapytań. Przykładowo, poniższy fragment kodu znajduje wszystkie elementy HTML będące znacznikiem span i dla których pole data-hook ma ustawioną wartość review-body: % ja nie wiem czy to jest do końca poprawne XD
+
+\begin{lstlisting}
+soup.find_all("span", {"data-hook": "review-body"})
+\end{lstlisting}
+
+Każdy z otrzymanych w poprzednim kroku plików przeszukano i dla każdego produktu wydobyto treści wszystkich widocznych na stronie recenzji razem z przydzielonymi gwiazdkami. Następnie przystąpiono do oznaczania sentymentów. Przyjęliśmy założenie, że ocena wynosząca 4 lub 5 gwiazdek oznacza wydźwięk pozytywny, ocena 3 - wydźwięk neutralny, a przyznanie 1 albo 2 gwiazdek wskazuje na wydźwięk negatywny. Tak oznaczone recenzje (treść - sentyment) zostały zgrupowane według kategorii produktu i zapisane w pliku w formacie csv.
+
+\subsubsection{Opis pozyskanych danych}
+
+Ostatecznie zebrano 251 recenzji:
+
+\begin{center}
+\begin{tabular}{ c c c }
+ cell1 & cell2 & cell3 \\ 
+ cell4 & cell5 & cell6 \\  
+ cell7 & cell8 & cell9    
+\end{tabular}
+\end{center}
+
+Rozkład klas jest równomierny w każdej kategorii.
+
+\subsubsection{Preprocessing}
+
+\subsection{Modele wykrywające wydźwięk}

@@ -1,0 +1,19 @@
+\newpage
+\section{Wstęp}
+
+\subsection{Temat projektu}
+
+Projekt polega na pobraniu opinii w języku angielskim o produktach z kategorii: proszki do prania kolorów, tabletki do zmywarki i kubki termiczne oraz zrealizowania modelu wykrywającego wydźwięk: pozytywny, neutralny, negatywny. Składa się z następujących zadań do zrealizowania:
+\begin{enumerate}
+    \item Pobranie opinii z portali internetowych i przygotowanie korpusu.
+    \item Stworzenie modelu.
+    \item Stworzenie drugiego modelu wykorzystującego dane dostępne w literaturze w ramach dotrenowania wykorzystywanego pretrenowanego modelu, np. BERT.
+\end{enumerate}
+
+\subsection{Definicja problemu}
+
+Wykrywanie wydźwięku/analiza sentymentów pozwala na zautomatyzowane określanie, czy dany tekst wyraża pozytywne, negatywne, czy neutralne zdanie na temat zadanego produktu lub konceptu (w najprostszym wariancie - istnieją również wersje realizujące np. wykrywanie emocji czy wyodrębnianie konkretnych aspektów produktu, które w szczególności interesują klientów, natomiast są one poza zakresem realizowanego projektu). Zastosowanie analizy sentymentów w kontekście biznesowym znacznie przyspiesza wyciąganie wniosków z nieoznaczonych zbiorów danych takich jak recenzje oferowanych produktów, wyniki ankiet satysfakcji, zgłoszenia do pomocy technicznej, komentarze na mediach społecznościowych, itp. - umożliwia dostrzeżenie pewnych wzorców w zbiorach o dużej objętości bez konieczności przeglądania wszystkich tekstów i oznaczania ich „ręcznie”.
+
+Celem projektu jest zbudowanie dwóch modeli wyznaczających wydźwięk zadanego tekstu, przeprowadzenie testów rozwiązania, oceny jakości modeli oraz ich porównanie, a następnie opisanie spostrzeżeń i wniosków. Danymi, na których powinny się uczyć i operować modele, mają być własnoręcznie pozyskane zbiory recenzji produktów z trzech kategorii z dowolnego portalu służącego do sprzedaży internetowej. Architektura rozwiązania powinna być oparta na opisanych w literaturze metodach analizy sentymentów. Modele powinny operować na recenzjach w języku angielskim. Program będący rezultatem ma w zamyśle być "gotowy do użytku", np. przez firmę zajmującą się dystrybucją proszków do prania kolorów i zamawiającą analizę opinii klientów na temat nowo wprowadzonego na rynek produktu.
+
+Niniejszy dokument omawia znalezione w literaturze metody i algorytmy rozwiązania problemu, opisuje proponowaną architekturę systemu, a następnie prezentuje sposób pozyskania i obróbki danych oraz szkielet planowanej implementacji projektu.

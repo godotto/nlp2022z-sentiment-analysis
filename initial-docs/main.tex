@@ -1,0 +1,87 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Bachelor's & Master's Thesis Template             %%
+%% Copyleft by Artur M. Brodzki & Piotr Woźniak      %%
+%% Covered for Lab/Assigment report by Tymon Żarski  %%
+%% Faculty of Electronics and Information Technology %%
+%% Warsaw University of Technology, 2019-2020        %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[
+    left=2.5cm,         % Sadly, generic margin parameter
+    right=2.5cm,        % doesnt't work, as it is
+    top=2.5cm,          % superseded by more specific
+    bottom=3cm,         % left...bottom parameters.
+    bindingoffset=6mm,  % Optional binding offset.
+    nohyphenation=false % You may turn off hyphenation, if don't like.
+]{eiti/eiti-report}
+
+\usepackage{listings}
+
+\langpol % Dla języka angielskiego mamy \langeng
+\graphicspath{{img/}}             % Katalog z obrazkami.
+\addbibresource{bibliografia.bib} % Plik .bib z bibliografią
+
+\begin{document}
+
+%--------------------------------------
+% Strona tytułowa
+%--------------------------------------
+\instytut{XXXXXX}
+\przedmiot{Wprowadzenie do przetwarzania języka naturalnego}
+\specjalnosc{XXXXXX}
+\title{
+    Analiza wydźwięku w języku angielskim na bazie recenzji produktów
+}
+\reportDescription{
+    Dokumentacja wstępna
+}
+
+\author{Olga Sapiechowska, Maciej Marcinkiewicz}
+\album{302687, XXXXXX}
+\prowadzacy{dr inż. Piotr Andruszkiewicz}
+\date{\today}
+\maketitle
+
+%--------------------------------------
+% Spis treści
+%--------------------------------------
+\tableofcontents
+
+%--------------------------------------
+% Rozdziały
+%--------------------------------------
+\cleardoublepage % Zaczynamy od nieparzystej strony
+\pagestyle{headings}
+
+\newpage % Rozdziały zaczynamy od nowej strony
+\input{tex/wstep.tex}
+
+\input{tex/metody-analizy.tex}
+
+\input{tex/opis-rozw.tex}
+
+\input{tex/projekt-implementacji.tex}
+
+%--------------------------------------------
+% Literatura
+%--------------------------------------------
+\cleardoublepage % Zaczynamy od nieparzystej strony
+\printbibliography
+
+
+
+%--------------------------------------------
+% Spisy (opcjonalne)
+%--------------------------------------------
+\pagestyle{plain}
+
+\vspace{0.8cm}
+
+\vspace{1cm}          % vertical space
+%\listofappendicestoc  % Spis załączników
+
+% Załączniki
+%
+
+
+\end{document}
