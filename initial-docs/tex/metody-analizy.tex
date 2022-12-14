@@ -26,22 +26,22 @@ klasę podanych do modelu danych. Są do tego wykorzystywane zarówno klasyczne 
 uczenia z nadzorem takie jak maszyny wektorów nośnych, losowy las decyzyjny i naiwny 
 klasyfikator Bayesa, ale także sieci neuronowe, między innymi sieci rekurencyjne,
 perceptrony wielowarstwowe, czy nawet używane głównie do przetwarzania obrazów splotowe
-sieci neuronowe.
+sieci neuronowe \cite{kim2014}.
 
 Uczenie maszynowe wymaga, aby dane były reprezentowane w sposób numeryczny. Dane można 
 reprezentować na przykład za pomocą bag-of-words - multizbioru słów, zawierającego jedynie
 statystykę wystąpień słów, ale także za pomocą word embeddings, czyli osadzeń słów w wektory.
 Metody word embedding pozwalają na zapisanie znaczeń słów -- dwa słowa są tym bliższe sobie,
 im bliżej są ich wektory w przestrzeni liniowej. Powszechnie stosuje się wcześniej wytrenowane
-modele word embeddingu takie jak word2vec, GloVe czy fastText.
+modele word embeddingu takie jak word2vec\cite{word2vec}, GloVe\cite{glove} czy fastText\cite{fasttext-vectors}.
 
 Jeszcze bardziej zaawansowane metody próbują analizować kontekst czy podmiot w danej wypowiedzi
 na podstawie analiz gramatycznych.
 
-Z kolei najnowszym osiągnięciem w dziedzinie są architektury transformatowe. Są skonstruowane
+Z kolei najnowszym osiągnięciem w dziedzinie są architektury transformatowe\cite{transformers}. Są skonstruowane
 w sposób podobny do sieci rekurencyjnych, ale w przeciwieństwie do nich przetwarzają wszystkie
-dane wejściowe na raz oraz wykorzystują mechanizm atencji. Do takich modeli należą BERT czy
-GPT. Te modele mogą służyć w wielu problemach związanych z przetwarzaniem języka naturalnego,
+dane wejściowe na raz oraz wykorzystują mechanizm atencji. Do takich modeli należą BERT\cite{bert} czy
+GPT\cite{gpt}. Te modele mogą służyć w wielu problemach związanych z przetwarzaniem języka naturalnego,
 włącznie z analizą wydźwięku. Mogą być również zastosowane jako warstwa emebddingu do innych
 architektur, zamiast dedykowanych temu modeli jak wspomniane wcześniej embeddery.
 
@@ -51,7 +51,7 @@ pochodzić na przykład z ontologii oraz z sieci semantycznych.
 
 \subsection{Przykłady istniejących architektur}
 Jedną z najbardziej znanych architektur sieci neuronowych do klasyfikacji tekstu
-jest fastText. Została stworzona przez zespół badawczy Facebooka, następnie projekt wyewoluował
+jest fastText\cite{fasttext-classification}. Została stworzona przez zespół badawczy Facebooka, następnie projekt wyewoluował
 w bibliotekę zawierającą także narzędzia do word embeddingów. Jest to płytka sieć neuronowa.
 Składa się jedynie z warstwy embeddingowej, warstwy gęstej (ukrytej) oraz warstwy wyjściowej
 zakończonej funkcją softmax. Zdecydowaną zaletą tej architektury jest jej szybkość. Jest
@@ -60,7 +60,7 @@ krótszym czasie treningu.
 
 Nieco mniej konwencjonalną metodą analizy wydźwięku jest stosowanie splotowych
 sieci neuronowych (CNN). Yoon Kim w swojej pracy „Convolutional Neural Networks for Sentence 
-Classification” porównał proste modele oparte na sieci złożonej z warstwy embeddingowej,
+Classification”\cite{cnn} porównał proste modele oparte na sieci złożonej z warstwy embeddingowej,
 z wektorami uzyskanymi z word2vec, jednej warstwy splotu oraz wyjściowej warstwy
 gęstej zakończonej softmaxem. Modele stworzone przez autora artykułu w większości
 przypadków miały przewagę nad innymi modelami. Ponadto została przez niego podkreślona istotność
