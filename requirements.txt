@@ -2,3 +2,13 @@ jupyter
 pandas
 bs4
 requests
+numpy
+-i https://download.pytorch.org/whl/cpu
+torch
+torchmetrics
+tqdm
+tensorboard
+matplotlib
+torchtext
+spacy
+scikit-learn
