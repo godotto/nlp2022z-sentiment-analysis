@@ -11,3 +11,6 @@ pyvenv.cfg
 *.syntex.gz
 *.blg
 *.log
+
+# TensorBoard runs
+sentiment-analysis/runs/

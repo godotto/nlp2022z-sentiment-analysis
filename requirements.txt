@@ -12,3 +12,4 @@ matplotlib
 torchtext
 spacy
 scikit-learn
+spacy_fastlang
