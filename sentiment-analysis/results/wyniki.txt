@@ -1,0 +1,15 @@
+pomarańczowy
+Test Loss: 0.834 | Test Acc: 68.83 | Test Precision: \0.693 | Test F1: 0.688
+Pretraied weights + fastText, batch size 50, weight decay 0,001, learning rate 0,001, embedding 300, feature maps 100, dropout 0,6
+
+czarny
+Test Loss: 0.711 | Test Acc: 69.33 | Test Precision: \0.699 | Test F1: 0.693
+batch size 50, weight decay 0,001, learning rate 0,001, embedding 300, feature maps 100, dropout 0,6
+
+niebieski
+Test Loss: 0.737 | Test Acc: 69.67 | Test Precision: \0.681 | Test F1: 0.697
+Pretraied weights, batch size 50, weight decay 0,001, learning rate 0,001, embedding 300, feature maps 100, dropout 0,6
+
+różowy
+Test Loss: 0.768 | Test Acc: 69.00 | Test Precision: \0.689 | Test F1: 0.690
+Pretraied weights, batch size 50, no weight decay, learning rate 0,001, embedding 300, feature maps 100, dropout 0,5
