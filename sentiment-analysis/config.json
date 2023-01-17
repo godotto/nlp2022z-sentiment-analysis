@@ -1,0 +1,15 @@
+{
+    "epochs": 50,
+    "learning_rate": 0.001,
+    "batch_size": 50,
+    "weight_decay": 0,
+    "embedding_dim": 300,
+    "dropout_rate_cnn": 0.5,
+    "output_dim_cnn": 3,
+    "feature_maps_num": 100,
+    "hidden_dim": 256,
+    "n_layers": 2,
+    "bidirectional": true,
+    "dropout_rate_bert": 0.5,
+    "output_dim_bert": 0.5
+}

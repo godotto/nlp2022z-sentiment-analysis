@@ -14,3 +14,9 @@ pyvenv.cfg
 
 # TensorBoard runs
 sentiment-analysis/runs/
+
+# fastText cache
+.vector_cache/
+
+# pretrained model
+*.pt
